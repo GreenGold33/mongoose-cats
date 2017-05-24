@@ -10,7 +10,7 @@
 
 OK
 ```
-    curl -X DELETE localhost:3000/cat/5924175e948f080dfeeb1685
+    curl -X DELETE localhost:3000/cat/592415a8b4954a0b84a27c45
 ```
 
 KO
@@ -23,7 +23,7 @@ KO
 OK
 ```
     curl -X POST --data "name=Paul" localhost:3000/cats
-    curl -X POST --data "name=John&age=15" localhost:3000/cats
+    curl -X POST --data "name=George&age=22" localhost:3000/cats
 ```
 
 KO
@@ -40,4 +40,5 @@ OK
 ```
     curl -X PUT --data "age=152" localhost:3000/cat/59254237d2046f0c42a9497a
     curl -X PUT --data "name=Ringo&age=58" localhost:3000/cat/59254237d2046f0c42a9497a
+    curl -X PUT --data "age=36" localhost:3000/cat/59254922a5df6b175ac64f52
 ```
