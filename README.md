@@ -63,7 +63,6 @@ curl \
 
 ***Way 2 (More complex but to edit any field/s)***
 
-OK
 ```
     curl \
       -H 'Content-Type: application/json' \
