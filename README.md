@@ -1,15 +1,16 @@
 # Api Cats #
 
-## List all cats ##
+**List all cats**
 
 ```bash
     curl localhost:3000/cats
 ```
 
-## Remove by Id ##
+**Remove by Id**
 
 OK
-```
+
+```bash
     curl -X DELETE localhost:3000/cat/592415a8b4954a0b84a27c45
 ```
 
@@ -18,7 +19,7 @@ KO
     curl -X DELETE localhost:3000/cat/esteesmiid
 ```
 
-## Add Cat ##
+**Add Cat**
 
 OK
 ```
@@ -34,7 +35,7 @@ KO
     curl -X POST localhost:3000/cats
 ```
 
-## Update data by Id ##
+**Update data by Id**
 
 OK
 ```
@@ -48,9 +49,9 @@ OK
     curl -X PUT --data "age=36" localhost:3000/cat/59254922a5df6b175ac64f52
 ```
 
-## Update several documents ##
+**Update several documents**
 
-### Way 1 (Easy & Recommended) ###
+***Way 1 (Easy & Recommended)***
 
 ```
 curl \
@@ -60,7 +61,7 @@ curl \
       localhost:3000/cats/age/zero
 ```
 
-### Way 2 (More complex but to edit any field/s) ###
+***Way 2 (More complex but to edit any field/s)***
 
 OK
 ```
