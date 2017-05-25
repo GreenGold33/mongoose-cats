@@ -1,4 +1,5 @@
 const Cat = require('../../../models/Cat')
+const debug = require('debug')('cats')
 
 function addCat(req,res) {
 
@@ -8,6 +9,7 @@ function addCat(req,res) {
 
   newCat.save()
     .then( msg => {
+      debug('succesfully added new cat...')
       res.json(msg)
     })
     .catch( err => {

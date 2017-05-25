@@ -11,7 +11,7 @@
 OK
 
 ```bash
-    curl -X DELETE localhost:3000/cat/592415a8b4954a0b84a27c45
+    curl -X DELETE localhost:3000/cat/59268e7f04cd1bbf3c5a9253
 ```
 
 KO
@@ -39,7 +39,7 @@ KO
 
 OK
 ```
-    curl -X PUT --data "age=152" localhost:3000/cat/59254237d2046f0c42a9497a
+    curl -X PUT --data "age=152" localhost:3000/cat/5924163d775d1d0c5964e4b2
     
     curl \
       -X PUT \
@@ -57,7 +57,7 @@ OK
 curl \
       -H 'Content-Type: application/json' \
       -X PUT \
-      -d '["592415df8510690bcd4aa7ee","592416128ebabc0c14f44278","5924163d775d1d0c5964e4b2"]' \
+      -d '["59254237d2046f0c42a9497a","5925427ad2046f0c42a9497b","59254922a5df6b175ac64f52"]' \
       localhost:3000/cats/age/zero
 ```
 
