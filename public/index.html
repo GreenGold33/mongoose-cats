@@ -1,13 +1,37 @@
 <!DOCTYPE html>
-<html lang="en" ng-app>
+<html lang="en" ng-app="mainApp">
 <head>
   <meta charset="UTF-8">
   <title>Document</title>
   <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js'></script>
 </head>
-<body>
-  <h1>Hello World! {{ 4 + 5 }}</h1>
+<body ng-controller="myController">
+
+  <h1>{{ title }} {{ 4 + 5 }}</h1>
+  <ul>
+    <li ng-repeat="cat in cats">{{cat.name}}</li>
+  </ul>
+
   <script>
+
+    angular.module('mainApp', [])
+      .controller('myController', function($scope, apiService) {
+        $scope.title = 'Hello World!'
+        apiService.getAllCats()
+          .then( cats => {
+            $scope.cats = cats
+          })
+      })
+      .factory('apiService', function($http) {
+
+        function getAllCats() {
+          return $http.get('/cats')
+                    .then( response => response.data )
+        }
+
+        return { getAllCats }
+
+      })
 
   </script>
 </body>
